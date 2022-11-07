@@ -1,2 +1,2 @@
 # Fundamentos_Java
-Entendimento das funções e conceitos básicos da linguagem Java
+Entendimento das métodos/funções e conceitos básicos da linguagem Java
