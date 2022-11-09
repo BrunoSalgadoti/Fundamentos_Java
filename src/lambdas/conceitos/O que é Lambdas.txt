@@ -1,0 +1,41 @@
+Uma expressão lambda é um bloco curto
+de código que recebe parâmetros
+e retorna um valor. Expressões lambda
+são semelhantes aos métodos, mas
+não precisam de um nome e podem ser
+implementado diretamente no corpo de um método.
+
+parâmetro -> expressão
+
+Para usar mais de um parâmetro, coloque-os entre parênteses:
+
+(parâmetro1, parâmetro2) -> expressão
+
+Exemplo
+Use uma expressão lamba no ArrayList's
+forEach() para imprimir todos os itens da lista:
+
+import java.util.ArrayList;
+
+classe pública Principal {
+  public static void main(String[] args) {
+    ArrayList<Integer> números = new ArrayList<Integer>();
+    números.adicionar(5);
+    números.adicionar(9);
+    números.adicionar(8);
+    números.adicionar(1);
+    números.forEach( (n) -> { System.out.println(n); } );
+  }
+}
+
+LAMBDAS / MÉTODOS / FUNÇÃO ANÕNIMAS
+
+//* No Parameter Syntax
+() -> {  
+//Body of no parameter lambda  
+}
+
+//* One Parameter Syntax
+(p1) -> {  
+//Body of single parameter lambda  
+}  

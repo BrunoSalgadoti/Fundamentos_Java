@@ -1,0 +1,58 @@
+Package java.util.function Description
+
+As interfaces funcionais fornecem tipos de destino para expressões lambda e referências de método.
+ Cada interface funcional tem um único método abstrato, chamado de método funcional para essa interface 
+ funcional, ao qual o parâmetro da expressão lambda e os tipos de retorno são correspondidos ou adaptados. As
+  interfaces funcionais podem fornecer um tipo de destino em vários contextos, como contexto de atribuição, 
+  invocação de método ou contexto de conversão:
+
+ // Assignment context
+     Predicate<String> p = String::isEmpty;
+
+     // Method invocation context
+     stream.filter(e -> e.getSize() > 10)...
+
+     // Cast context
+     stream.map((ToIntFunction) e -> e.getSize())...
+
+As interfaces neste pacote são interfaces funcionais de uso geral usadas pelo JDK e também estão disponíveis para 
+serem usadas pelo código do usuário. Embora eles não identifiquem um conjunto completo de formas de funções para 
+as quais as expressões lambda possam ser adaptadas, eles fornecem o suficiente para cobrir os requisitos comuns. 
+Outras interfaces funcionais fornecidas para fins específicos, como FileFilter, são definidas nos pacotes em que são utilizadas.
+
+As interfaces neste pacote são anotadas com FunctionalInterface. Essa anotação não é um requisito para o compilador 
+reconhecer uma interface como uma interface funcional, mas apenas uma ajuda para capturar a intenção do projeto e 
+obter a ajuda do compilador na identificação de violações acidentais da intenção do projeto.
+
+Interfaces funcionais geralmente representam conceitos abstratos como funções, ações ou predicados. Ao documentar
+ interfaces funcionais, ou referir-se a variáveis ​​digitadas como interfaces funcionais, é comum referir-se diretamente
+  a esses conceitos abstratos, por exemplo, usando "esta função" em vez de "a função representada por este objeto". 
+  Quando se diz que um método de API aceita ou retorna uma interface funcional dessa maneira, como "aplica a função 
+  fornecida a...", entende-se que isso significa uma referência não nula a um objeto que implementa a interface funcional 
+  apropriada, a menos que nulidade potencial é explicitamente especificada.
+
+As interfaces funcionais neste pacote seguem uma convenção de nomenclatura extensível, como segue:
+
+* Existem várias formas básicas de função, incluindo  Function (unary function from T to R),  Consumer 
+(unary function from T to void),  Predicate (unary function from T to boolean) e  Supplier (nilary function to R).
+
+* As formas de função têm uma aridade natural baseada em como são mais comumente usadas. As formas básicas podem 
+ser modificadas por um prefixo de aridade para indicar uma aridade diferente, como BiFunction
+ (binary function from T and U to R).
+
+*Existem formas de função derivadas adicionais que estendem as formas básicas de função, incluindo UnaryOperator
+ (extends Function) e BinaryOperator (extends BiFunction).
+
+*Os parâmetros de tipo de interfaces funcionais podem ser especializados em primitivos com prefixos de tipo adicionais. 
+Para especializar o tipo de retorno para um tipo que tem o tipo de retorno genérico e argumentos genéricos, prefixamos ToXxx,
+ como em ToIntFunction. Caso contrário, os argumentos de tipo são especializados da esquerda para a direita, como em 
+ DoubleConsumer ou ObjIntConsumer. (O prefixo de tipo Obj é usado para indicar que não queremos especializar este parâmetro,
+mas queremos passar para o próximo parâmetro, como em ObjIntConsumer.) Esses esquemas podem ser combinados, como 
+em IntToDoubleFunction.
+
+*Se houver prefixos de especialização para todos os argumentos, o prefixo arity pode ser omitido (como em ObjIntConsumer).
+
+Since:
+1.8
+See Also:
+FunctionalInterface
