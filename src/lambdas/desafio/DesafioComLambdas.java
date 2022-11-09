@@ -16,7 +16,7 @@ public class DesafioComLambdas {
 		UnaryOperator<Double> frete = 
 				preco -> preco >= 3000 ? preco + 100 : preco + 50;
 		UnaryOperator<Double> arredondar = 
-				//preco -> Double.parseDouble(String.format("%.2f", preco)); // <-- Errro nesta linha
+				//preco -> Double.parseDouble(String.format("%.2f", preco)); // <-- Errro nesta linha devido ao "Locale"
 				preco -> Double.parseDouble(String.format("%.7s", preco)); // <-- como no meu código (funciona)
 		Function<Double, String> formatar = 
 				preco -> ("R$ " + preco).replace(".", ",");
