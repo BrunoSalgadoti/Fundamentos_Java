@@ -1,0 +1,5 @@
+Stream API "Java 8" -> É um recurso que ajuda a manipular coleções de uma maneira simples e eficiente seguindo os princípios da programação funcional.
+
+Porquê usar stream Java?
+Toda coleção tem um método que se chama stream que devolve uma corrente de objetos. A utilidade de utilizar é ter acesso a métodos bem úteis que facilitarão a rotina de programação além de melhorar o nível do código.
+

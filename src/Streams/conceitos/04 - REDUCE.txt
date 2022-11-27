@@ -1,0 +1,4 @@
+reduce() em Java com exemplos. Muitas vezes, precisamos realizar operações onde um fluxo se reduz a um único valor resultante, por exemplo, máximo, mínimo, soma, produto, etc. Reduzir é o processo repetido de combinar todos os elementos.
+
+
+OBs: Reduce é uma função terminadora não tem como encadear mais funções como o foreach(). 

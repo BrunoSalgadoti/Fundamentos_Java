@@ -1,0 +1,10 @@
+O método filter() é usado na programação funcional como um método intermediário. Um predicado é um predicado sem estado e não interferente a ser aplicado a cada elemento para determinar se ele deve ser incluído.
+
+Você não precisa criar uma outra lista filtrada, pode aproveitar que está usando streams e usar o método filter : Map<String, List<Pessoa>> map = listPessoas. stream() // filtrar pelo critério que vc precisa . filter(pessoa -> pessoa.
+
+EX2: 
+Map<String, List<Pessoa>> map = listPessoas.stream()
+    // filtrar pelo critério que vc precisa
+    .filter(pessoa -> pessoa.getName().endsWith("o"))
+    // agrupar por data de nascimento
+    .collect(Collectors.groupingBy(Pessoa::getDate_born));

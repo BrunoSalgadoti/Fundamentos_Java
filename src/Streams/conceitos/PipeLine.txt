@@ -1,0 +1,5 @@
+PipeLine
+
+Em software, um pipeline consiste em uma cadeia de elementos de processamento - processos, threads, funções - dispostos de modo que a saída de cada elemento seja a entrada do próximo; Geralmente, uma certa quantidade de buffer é fornecida entre elementos consecutivos.
+
+OBS: É uma sequencia de execução quando você tem várias funções encandeadas (Fluxo de processamento). 

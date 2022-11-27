@@ -1,0 +1,2 @@
+Map é uma interface java que contém uma estrutura de dados que permite trabalhar com uma estrutura de chave e valor.
+
